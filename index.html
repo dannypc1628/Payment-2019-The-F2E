@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="freecell" class="w-100 d-flex  flex-column justify-content-center">
+           
+        <div id="game-start" class="d-flex justify-content-center align-self-center" v-if="status==1">
+                <div class="">
+                        <div id="start-button" class="text-center " v-on:click="start">START</div>
+                </div>
+
+                <div id="start-bar" class="align-self-end w-100"> 
+            
+                        <div id="how-to-play" class=" d-flex justify-content-center  align-items-center h-100">
+                            
+                            <span class="text-center ">How to play?</span>
+                        </div>
+                </div>
+                
+        </div>
+        
+        <div id="game-play" class="d-flex flex-column  w-100 " v-if="status!=1">
+                
+                <nav class=" d-flex navbar navbar-light freecell-top-bar w-100" v-if="status!=1">
+                        <a class="navbar-brand text-light " href="#">FREECELL</a>
+                </nav>  
+                
+                        <div class="row mt-2 justify-content-center">
+                            
+                                <div class="col-sm-1">
+                                  <div class="card">
+                                        <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                  </div>
+                                </div>
+                                <div class="col-sm-1">
+                                        <div class="card">
+                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                        </div>
+                                 </div>
+                                 <div class="col-sm-1">
+                                        <div class="card">
+                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                        </div>
+                                 </div>
+
+                                 <div class="col-sm-1">
+                                        <div class="card">
+                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                        </div>
+                                 </div>
+                                 <div class="col-sm-1"></div>
+                                 <div class="col-sm-1">
+                                        <div class="card">
+                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-1">
+                                              <div class="card">
+                                                    <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                              </div>
+                                       </div>
+                                       <div class="col-sm-1">
+                                              <div class="card">
+                                                    <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                              </div>
+                                       </div>
+      
+                                       <div class="col-sm-1">
+                                              <div class="card">
+                                                    <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
+                                              </div>
+                                       </div>
+                                                  
+                        </div>
+                   
+        
+        </div>
+        
+    </div>
+    <div class="fixed-bottom text-light text-center">你好，我是長庚，這是六角學院2019前端&UI修練精神時光屋活動，第二週前端投稿作品，採用的設計稿是<a href="https://challenge.thef2e.com/user/2232?schedule=3011#works-3011">UI設計師Penny的作品</a></div>
+</body>
+<script src="./js/week2.js"></script>
+</html>
