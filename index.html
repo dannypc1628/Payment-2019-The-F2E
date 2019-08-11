@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Week2</title>
+    <title>Week4</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
     crossorigin="anonymous">
@@ -15,82 +15,86 @@
     <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-    <div id="freecell" class="w-100 d-flex  flex-column justify-content-center">
-           
-        <div id="game-start" class="d-flex justify-content-center align-self-center" v-if="status==1">
-                <div class="">
-                        <div id="start-button" class="text-center " v-on:click="start">START</div>
-                </div>
+      <div  class="container">
+          <div class="row justify-content-center w-100">
+                  <div class="my-head w-100">
 
-                <div id="start-bar" class="align-self-end w-100"> 
-            
-                        <div id="how-to-play" class=" d-flex justify-content-center  align-items-center h-100">
-                            
-                            <span class="text-center ">How to play?</span>
+                        <div class="my-bar">
+                              <div class="my-title-bar-bg ">
+                                          <div class="row my-title-bar justify-content-center h-100">
+                                                <div class="col-3"></div>      
+                                                <div class="col-1 text-white text-center"><</div>
+                                                      <div class="col-4 text-white text-center h-100">
+                                                            結帳
+                                                            <div class="status-bar d-flex justify-content-center h-50 align-items-center">
+                                                                        <div>1</div>
+                                                                        <div>-</div>
+                                                                        <div>2</div>
+                                                                        <div>-</div>
+                                                                        <div>3</div>
+                                                                        <div>-</div>
+                                                                        <div>4</div>
+                                                                  </div>
+                                                                  <div class="status-contain">
+                                                                        STEP 1-請選擇付款方式
+                                                                  </div>
+                                                      </div>
+                                                      <div class="col-1"><</div>
+                                                      <div class="col-3"></div> 
+                                          </div>
+                              </div>
+                              
+                              
                         </div>
-                </div>
-                
-        </div>
-        
-        <div id="game-play" class="d-flex flex-column  w-100 " v-if="status!=1">
-                
-                <nav class=" d-flex navbar navbar-light freecell-top-bar w-100" v-if="status!=1">
-                        <a class="navbar-brand text-light " href="#">FREECELL</a>
-                </nav>  
-                
-                        <div class="row mt-2 justify-content-center">
-                            
-                                <div class="col-sm-1">
-                                  <div class="card">
-                                        <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                  </div>
-                                </div>
-                                <div class="col-sm-1">
-                                        <div class="card">
-                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                        </div>
-                                 </div>
-                                 <div class="col-sm-1">
-                                        <div class="card">
-                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                        </div>
-                                 </div>
+                  </div>
+                  <div class="my-body col-12">
+                        
+                              <div class="row justify-content-center">
+                                    <div class="col-10 border m-2 row">
+                                          <svg id="icons" class="col-2 pl-0" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#231f20;}</style></defs><title/><path class="cls-1" d="M54.9,9H9.1A6.11,6.11,0,0,0,3,15.1V48.9A6.11,6.11,0,0,0,9.1,55H54.9A6.11,6.11,0,0,0,61,48.9V15.1A6.11,6.11,0,0,0,54.9,9ZM9.1,13H54.9A2.1,2.1,0,0,1,57,15.1V21H7V15.1A2.1,2.1,0,0,1,9.1,13ZM54.9,51H9.1A2.1,2.1,0,0,1,7,48.9V25H57V48.9A2.1,2.1,0,0,1,54.9,51Z"/><path class="cls-1" d="M51,43H42a2,2,0,0,0,0,4h9a2,2,0,0,0,0-4Z"/></svg>
+                                          <div class="col-10 h3">信用卡</div>
+                                    </div>
+                                    <div class="col-10 border m-2 row">
+                                          <svg class="col-2 pl-0" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 489.4 489.4" style="enable-background:new 0 0 489.4 489.4;" xml:space="preserve">
+                                         
+                                               <g>
+                                                     <path d="M347.7,263.75h-66.5c-18.2,0-33,14.8-33,33v51c0,18.2,14.8,33,33,33h66.5c18.2,0,33-14.8,33-33v-51
+                                                           C380.7,278.55,365.9,263.75,347.7,263.75z M356.7,347.75c0,5-4.1,9-9,9h-66.5c-5,0-9-4.1-9-9v-51c0-5,4.1-9,9-9h66.5
+                                                           c5,0,9,4.1,9,9V347.75z"/>
+                                                     <path d="M489.4,171.05c0-2.1-0.5-4.1-1.6-5.9l-72.8-128c-2.1-3.7-6.1-6.1-10.4-6.1H84.7c-4.3,0-8.3,2.3-10.4,6.1l-72.7,128
+                                                           c-1,1.8-1.6,3.8-1.6,5.9c0,28.7,17.3,53.3,42,64.2v211.1c0,6.6,5.4,12,12,12h66.3c0.1,0,0.2,0,0.3,0h93c0.1,0,0.2,0,0.3,0h221.4
+                                                           c6.6,0,12-5.4,12-12v-209.6c0-0.5,0-0.9-0.1-1.3C472,224.55,489.4,199.85,489.4,171.05z M91.7,55.15h305.9l56.9,100.1H34.9
+                                                           L91.7,55.15z M348.3,179.15c-3.8,21.6-22.7,38-45.4,38c-22.7,0-41.6-16.4-45.4-38H348.3z M232,179.15c-3.8,21.6-22.7,38-45.4,38
+                                                           s-41.6-16.4-45.5-38H232z M24.8,179.15h90.9c-3.8,21.6-22.8,38-45.5,38C47.5,217.25,28.6,200.75,24.8,179.15z M201.6,434.35h-69
+                                                           v-129.5c0-9.4,7.6-17.1,17.1-17.1h34.9c9.4,0,17.1,7.6,17.1,17.1v129.5H201.6z M423.3,434.35H225.6v-129.5
+                                                           c0-22.6-18.4-41.1-41.1-41.1h-34.9c-22.6,0-41.1,18.4-41.1,41.1v129.6H66v-193.3c1.4,0.1,2.8,0.1,4.2,0.1
+                                                           c24.2,0,45.6-12.3,58.2-31c12.6,18.7,34,31,58.2,31s45.5-12.3,58.2-31c12.6,18.7,34,31,58.1,31c24.2,0,45.5-12.3,58.1-31
+                                                           c12.6,18.7,34,31,58.2,31c1.4,0,2.7-0.1,4.1-0.1L423.3,434.35L423.3,434.35z M419.2,217.25c-22.7,0-41.6-16.4-45.4-38h90.9
+                                                           C460.8,200.75,441.9,217.25,419.2,217.25z"/>
+                                               </g>
+                                        
+                                         </svg>
+                                         
+                                          <div class="col-10 h3">超商支付</div>
+                                    </div>
+                                    
+                                    
+                              </div>
+                        
+                  </div>
+                  <div class="my-foot col-12 row justify-content-center">
+                        <div class=" col-5">上一步</div>
 
-                                 <div class="col-sm-1">
-                                        <div class="card">
-                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                        </div>
-                                 </div>
-                                 <div class="col-sm-1"></div>
-                                 <div class="col-sm-1">
-                                        <div class="card">
-                                              <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                        </div>
-                                      </div>
-                                      <div class="col-sm-1">
-                                              <div class="card">
-                                                    <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                              </div>
-                                       </div>
-                                       <div class="col-sm-1">
-                                              <div class="card">
-                                                    <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                              </div>
-                                       </div>
-      
-                                       <div class="col-sm-1">
-                                              <div class="card">
-                                                    <img src="./img/card/club/club_1.png" class="card-img-top" alt="...">
-                                              </div>
-                                       </div>
-                                                  
-                        </div>
-                   
-        
-        </div>
-        
-    </div>
-    <div class="fixed-bottom text-light text-center">你好，我是長庚，這是六角學院2019前端&UI修練精神時光屋活動，第二週前端投稿作品，採用的設計稿是<a href="https://challenge.thef2e.com/user/2232?schedule=3011#works-3011">UI設計師Penny的作品</a></div>
+                        <div class="col-5">下一步</div>
+                  </div>
+          </div>
+          <div class="text-light text-center">
+                  你好，我是<a href="https://challenge.thef2e.com/user/2454">長庚</a>，這是六角學院2019前端&UI修練精神時光屋活動，第二週前端投稿作品，採用的設計稿是<a href="">UI設計師  的作品</a>
+              </div>
+      </div>
+    
+    <script src="./js/week4.js"></script>
 </body>
-<script src="./js/week2.js"></script>
+
 </html>

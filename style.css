@@ -1,3 +1,29 @@
+.my-head{
+    /* border-radius:  0  0 50% 50%/ 0 0 50px 50px; */
+    /* width: 1500px;
+    max-width: 1000px;
+    height: 200px;*/
+    overflow: hidden; 
+    
+}
+.my-title-bar-bg{
+    border-radius:  0  0 50% 50%/ 0 0 50% 50%;
+    width: 200%;
+    left:-50%;
+    height: 200px;
+    position: relative;
+    background: -webkit-linear-gradient(top,#3725AF,#8244BB);
+    background: -o-linear-gradient(bottom ,#3725AF,#8244BB);
+    background: -moz-linear-gradient(bottom ,#3725AF,#8244BB);
+    background: linear-gradient(to bottom ,#3725AF,#8244BB);
+    
+}
+.my-body{
+
+}
+.my-foot{
+
+}
 #game-start{
     height:1000px;
     width: 1600px; 
