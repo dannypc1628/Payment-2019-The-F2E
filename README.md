@@ -4,6 +4,6 @@
 第四週 線上支付作品
 
 本人報名前端工程師組，採用的設計稿為:
-UI設計師  的設計作品  
+UI設計師 Letitia73 的設計作品 https://challenge.thef2e.com/user/1930?schedule=3458#works-3458  
 
 
