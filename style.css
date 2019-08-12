@@ -25,17 +25,46 @@
 .my-button{
     background: #8244BB;
     border-radius:  30px;
+    border: 3px solid #8244BB ;
     
+}
+.my-button:hover{
+    border: 3px solid rgb(152, 213, 253) ;
+    box-shadow: 0 0 10px  rgb(152, 213, 253);
+    
+}
+.my-button-none{
+    background: #C7A4D0;
+    border: 3px solid #C7A4D0 ;
+    border-radius:  30px;
 }
 .my-tag{
     border-radius:  10px;
     border: 2px solid rgb(238, 238, 238);
+}
+.my-tag:hover{
+    box-shadow: 0 0 10px  rgb(152, 213, 253);
 }
 .my-cycle{
     width: 48px;
     height: 48px;
     border-radius: 50%;
     border: 2px solid white;
+    padding: 3px;
+    margin: 3px;
+}
+input{
+    background: rgb(236, 236, 236);
+    border-radius:  30px;
+    border: 1px solid rgb(216, 216, 216);
+}
+.this-status{
+    background: white;
+    color: #3725AF !important;
+}
+.this-pay-mode{
+    border: 3px solid rgb(152, 213, 253) !important;
+    box-shadow: 0 0 15px  rgb(152, 213, 253);
 }
 .my-body{
     height: 400px;

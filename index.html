@@ -14,49 +14,57 @@
     <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-      <div id="page" class="container">
-          <div class="row justify-content-center w-100">
+      <div id="page" class="container ">
+          <div class="row justify-content-center w-100 border">
                   <div class="my-head w-100 mb-3">
 
                         <div class="my-bar">
                               <div class="my-title-bar-bg ">
                                           <div class="row my-title-bar justify-content-center h-100">
-                                                <div class="col-3"></div>      
-                                                <div class="col-1 text-white text-center mt-2"><</div>
-                                                      <div class="col-4 text-white text-center h-100 mt-2">
+                                                <div class="col-3">
+
+                                                </div>      
+                                                <div class="col-1 text-white text-center mt-2"> < </div>
+                                                <div class="col-4 text-white text-center h-100 mt-2">
                                                             結帳
-                                                            <div class="status-bar d-flex justify-content-center h-50 align-items-center">
-                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center">1</div>
+                                                                  <div class="status-bar d-flex justify-content-center h-50 align-items-center">
+                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center " :class="{'this-status' : status==1}">1</div>
                                                                         <div class=" m-1 h3 pb-1">—</div>
-                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center">2</div>
+                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center" :class="{'this-status' : status==2}">2</div>
                                                                         <div class=" m-1 h3 pb-1">—</div>
-                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center">3</div>
+                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center" :class="{'this-status' : status==3}">3</div>
                                                                         <div class=" m-1 h3 pb-1">—</div>
-                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center">4</div>
+                                                                        <div class=" m-1 my-cycle h5  d-flex justify-content-center  align-items-center" :class="{'this-status' : status==4}">4</div>
                                                                   </div>
                                                                   <div class="mt-3 status-contain">
-                                                                        STEP 1-請選擇付款方式
+                                                                              
+                                                                        {{title}}
                                                                   </div>
-                                                      </div>
-                                                      <div class="col-1"><</div>
-                                                      <div class="col-3"></div> 
+                                                </div>
+                                                <div class="col-1"> 
+                                                            
+                                                </div>
+                                                <div class="col-3">
+
+                                                </div> 
+                                                
                                           </div>
+                              
+                              
                               </div>
-                              
-                              
                         </div>
                   </div>
-                  <div class="my-body col-12 mt-3">
+                  <div class="my-body col-12 mt-3"  >
                         
-                              <div class="row justify-content-center">
-                                    <div class="col-10 my-tag m-2 p-2 row">
-                                          <svg id="icons" class="col-2 pl-0 ml-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#231f20;}</style></defs><title/><path class="cls-1" d="M54.9,9H9.1A6.11,6.11,0,0,0,3,15.1V48.9A6.11,6.11,0,0,0,9.1,55H54.9A6.11,6.11,0,0,0,61,48.9V15.1A6.11,6.11,0,0,0,54.9,9ZM9.1,13H54.9A2.1,2.1,0,0,1,57,15.1V21H7V15.1A2.1,2.1,0,0,1,9.1,13ZM54.9,51H9.1A2.1,2.1,0,0,1,7,48.9V25H57V48.9A2.1,2.1,0,0,1,54.9,51Z"/><path class="cls-1" d="M51,43H42a2,2,0,0,0,0,4h9a2,2,0,0,0,0-4Z"/></svg>
+                              <div class="row justify-content-center" :class="{'d-none' : status!=1}">
+                                    <div class="col-10 my-tag m-2 p-2 row" :class="{'this-pay-mode':payMode==1}" v-on:click="selectPayMode(1)"> 
+                                          <svg id="icons" class="col-2 pl-0 ml-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs></defs><title/><path class="cls-1" d="M54.9,9H9.1A6.11,6.11,0,0,0,3,15.1V48.9A6.11,6.11,0,0,0,9.1,55H54.9A6.11,6.11,0,0,0,61,48.9V15.1A6.11,6.11,0,0,0,54.9,9ZM9.1,13H54.9A2.1,2.1,0,0,1,57,15.1V21H7V15.1A2.1,2.1,0,0,1,9.1,13ZM54.9,51H9.1A2.1,2.1,0,0,1,7,48.9V25H57V48.9A2.1,2.1,0,0,1,54.9,51Z"/><path class="cls-1" d="M51,43H42a2,2,0,0,0,0,4h9a2,2,0,0,0,0-4Z"/></svg>
                                           <div class="col-9 ">
                                                 <div class=" h4 font-weight-bold mb-0">信用卡</div>
                                                 <div class=" text-black-50">(可接受VISA,Master,JCB)</div>
                                           </div>
                                     </div>
-                                    <div class="col-10 my-tag  m-2 p-2 row">
+                                    <div class="col-10 my-tag  m-2 p-2 row" :class="{'this-pay-mode':payMode==2}" v-on:click="selectPayMode(2)">
                                           <svg class="col-2 pl-1 ml-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 489.4 489.4" style="enable-background:new 0 0 489.4 489.4;" xml:space="preserve">
                                          
@@ -86,17 +94,44 @@
                                     
                                     
                               </div>
+                              <div class="row justify-content-center" :class="{'d-none' : status!=2}">
+                                    <div class="col-6">
+                                         <svg id="f1410098-b6ef-424e-beee-8c1519bc1d1f" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 915.68773 679.27607"><defs><linearGradient id="b5076013-d6c0-4649-8f63-d536232108ef" x1="549.23403" y1="734.77229" x2="549.23403" y2="126.56914" gradientTransform="matrix(0.97485, 0.30762, -0.30291, 0.99, 144.20301, -171.28919)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="gray" stop-opacity="0.25"/><stop offset="0.53514" stop-color="gray" stop-opacity="0.12"/><stop offset="1" stop-color="gray" stop-opacity="0.1"/></linearGradient><linearGradient id="be72c466-93ff-4e9c-a64c-30b94918ee69" x1="549.32281" y1="679.27607" x2="549.32281" y2="233.83602" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#b5076013-d6c0-4649-8f63-d536232108ef"/></defs><title>Credit card</title><rect x="184.85689" y="201.52958" width="728.622" height="445.00176" rx="27.5" transform="translate(-243.24579 71.69262) rotate(-17.2615)" fill="url(#b5076013-d6c0-4649-8f63-d536232108ef)"/><rect x="193.71997" y="205.56022" width="713.75592" height="429.25181" rx="27.5" transform="translate(-242.04064 71.94381) rotate(-17.2615)" fill="#fff"/><rect x="155.9523" y="267.86085" width="713.75592" height="61.55937" transform="translate(-207.67506 55.26252) rotate(-17.2615)" fill="#8344bb"/><rect x="303.66876" y="610.48755" width="181.35057" height="26.62027" transform="translate(-309.4966 34.74867) rotate(-17.2615)" fill="#bdbdbd"/><rect x="287.34157" y="547.84131" width="314.45191" height="26.62027" transform="translate(-288.64532 46.83008) rotate(-17.2615)" fill="#e0e0e0"/><rect x="182.9579" y="233.83602" width="732.72983" height="445.44005" rx="27.5" fill="url(#be72c466-93ff-4e9c-a64c-30b94918ee69)"/><rect x="191.27673" y="238.37789" width="713.75592" height="429.25181" rx="27.5" fill="#fff"/><rect x="361.01292" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="387.63319" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="414.25346" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="460.83892" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="487.45919" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="514.07946" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="560.66493" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="587.28519" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="613.90546" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="660.49093" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="687.1112" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="713.73147" y="446.76044" width="20.79708" height="59.06372" fill="#e0e0e0"/><rect x="236.68773" y="350.83602" width="124" height="68" fill="#8344bb"/><rect x="718.68773" y="573.83602" width="76" height="76" fill="#8344bb" opacity="0.1"/><rect x="756.68773" y="573.83602" width="76" height="76" fill="#8344bb" opacity="0.1"/></svg> 
+                                    </div>
+                                    <div class="col-12 m-2">請輸入信用卡資訊</div>
+                                    <div class="col-12 m-2">
+                                          <input type="text" placeholder="信用卡號">
+                                    </div>
+                                    <div class="col-12 m-2">
+                                          <input type="text" placeholder="持有人姓名">
+                                    </div>
+                                    <div class="col-12 m-2">
+                                          <div class="row">
+                                                <div class="col-5">
+                                                      <input type="text" placeholder="有效月年">
+                                                </div>
+                                                <div class="col-3">
+                                                      <input type="text" placeholder="CVV">
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="col-8"></div>
+                                    <div class="col-8"></div>
+                              </div>
                         
                   </div>
-                  <div class="my-foot col-12 mt-5 row justify-content-around">
-                        <div class="p-2 col-3 text-center my-button text-white">上一步</div>
+                  <div class="my-foot col-12 m-4 row justify-content-around">
+                        <div class="p-2 col-3 text-center  text-white" :class="[status==1? 'my-button-none': 'my-button']" v-on:click="backStep">上一步</div>
 
-                        <div class="p-2 col-3 text-center my-button text-white">下一步</div>
+                        <div class="p-2 col-3 text-center  text-white" :class="[status==4||payMode!=1? 'my-button-none': 'my-button']" v-on:click="nextStep">下一步</div>
                   </div>
-          </div>
-          <div class="text-center">
+            </div>
+            
+            <div class="text-center ">
                   你好，我是<a href="https://challenge.thef2e.com/user/2454">長庚</a>，這是六角學院2019前端&UI修練精神時光屋活動，第二週前端投稿作品，採用的設計稿是<a href="">UI設計師  的作品</a>
-              </div>
+            </div>
+      
+
       </div>
     
     <script src="./js/week4.js"></script>
