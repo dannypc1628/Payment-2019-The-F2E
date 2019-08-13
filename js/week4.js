@@ -6,7 +6,7 @@ var app = new Vue({
         payMode:0,
         timer:"25:00",
         title:'STEP 1-請選擇付款方式',
-        statusTitles:['','STEP 1-請選擇付款方式','STEP 2-請輸入付款資訊','STEP 3-請確認付款資訊','付款成功']
+        statusTitles:['','STEP 1-請選擇付款方式','STEP 2-請輸入付款資訊','STEP 3-請確認付款資訊','付款成功!']
     },
     methods:{
         nextStep:function( event){
